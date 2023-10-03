@@ -15,9 +15,7 @@ struct ContentView: View {
                 selectedUser = User()
                 isShowingUser = true
             }
-            .alert("Welcome", isPresented: $isShowingUser, presenting: selectedUser) { user in
-                Button(user.id) { }
-            }
+            .alert("Welcome", isPresented: $isShowingUser) { }
     }
 }
 
