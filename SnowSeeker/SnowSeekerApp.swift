@@ -1,9 +1,3 @@
-//
-//  SnowSeekerApp.swift
-//  SnowSeeker
-//
-//  Created by Michael Welker on 2023-10-03.
-//
 
 import SwiftUI
 
