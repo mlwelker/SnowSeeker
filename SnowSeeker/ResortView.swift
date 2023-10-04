@@ -22,6 +22,8 @@ struct ResortView: View {
                         .scaledToFit()
                     
                     Text("Photo by: \(resort.imageCredit)")
+                        .padding(4)
+                        .background(.black.opacity(0.45))
                         .font(.caption.bold())
                         .foregroundStyle(.white)
                 }
