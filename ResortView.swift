@@ -5,6 +5,7 @@ struct ResortView: View {
     let resort: Resort
     
     @Environment(\.horizontalSizeClass) var sizeClass
+    @Environment(\.dynamicTypeSize) var typeSize
     
     var body: some View {
         ScrollView {
@@ -14,7 +15,7 @@ struct ResortView: View {
                     .scaledToFit()
                 
                 HStack {
-                    if sizeClass == .compact {
+                    if sizeClass == .compact && typeSize > .large {
                         VStack(spacing: 10) { ResortDetailsView(resort: resort) }
                         VStack(spacing: 10) { SkiDetailsView(resort: resort) }
                     } else {
@@ -24,6 +25,7 @@ struct ResortView: View {
                 }
                 .padding(.vertical)
                 .background(Color.primary.opacity(0.1))
+                .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
                 
                 Group {
                     Text(resort.description)
